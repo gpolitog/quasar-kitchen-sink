@@ -1,0 +1,19 @@
+<!-- chat list -->
+<div class="chat-list">
+  <chat-message v-for="message in messages" :message="message"/>
+</div>
+
+<!-- chat-message -->
+<div :class="chatType">
+  <div class="chat-user">
+    <img :src="avatar">
+  </div>
+  <div class="chat-date">
+    {{ message.timestamp }}
+  </div>
+  <div class="chat-message">
+    <p>
+      {{ message.message }}
+    </p>
+  </div>
+</div>
